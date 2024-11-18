@@ -1,5 +1,8 @@
 package org.jsp.FistProjectApp;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -56,7 +59,14 @@ public class EmployeRunner {
 				System.out.println(f.apply(e));
 			}
 		});
-
+		/// use the comparater sot age in assending order;
+		Comparator<Employee> cc=(o1,o2)->o1.getAge()-o2.getAge();
+		Collections.sort(li,cc);
+//		Collections.sort(li,new SortByAge());
+		li.forEach((e)->{
+			System.out.println(e);
+		});
+	
 	}
 	}
 
